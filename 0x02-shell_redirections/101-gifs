@@ -1,0 +1,3 @@
+#!/bin/bash
+find . -type f -name "*.gif" | while read file; do file_name=$(echo "$file" | rev | cut -d'.' -f2- | rev); echo "$file_name"; done | sort -f | sed 's|^./||'
+
